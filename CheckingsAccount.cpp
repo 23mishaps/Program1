@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 //constructors
-CheckingsAccount::CheckingsAccount(int accountNo, string newOwner):BankAccount(accountNo, owner),checkFee(0.0){};
+CheckingsAccount::CheckingsAccount(int accountNo, string newOwner):BankAccount(accountNo, newOwner),checkFee(0.0){};
 //mutator and accessor methods
 void CheckingsAccount::setCheckFee(double newFee)
 {
@@ -20,9 +20,12 @@ void CheckingsAccount::writeCheck(double checkValue)
     if(balance > checkValue)
     {
         balance -= (checkValue + checkFee);
+        return balance;
     }
     else 
     {
         cout << "Account Balance is less than check.\nCannot write check." << endl;
+        return 0;
     }
+    return 0;
 }
