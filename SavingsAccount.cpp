@@ -15,7 +15,8 @@ void SavingsAccount::setRate(double newRate)
     }
     else 
     {
-        cout << "Rate must be a percentage such as .50 for 50%\nPlease choose a different rate." <<endl;
+        cout << "Rate must be a percentage such as .50 for 50%\nSetting rate to 0.01." <<endl;
+        intRate = 0.01;
     }
 }
 double SavingsAccount::getRate() const
