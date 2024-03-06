@@ -39,5 +39,5 @@ void HighInterestChecking::printStatement()
     cout << "Account Type: High Interest Checkings Account\nAccount Number: " << accountNo << endl;
     cout << "Account Owner: " << owner << "\nAccount Balance: " << balance << endl;
     cout << "Interest earned: " << calculateBalance() << "\nNewBalance: " << (balance + calculateBalance()) << endl;
-    balance = calculateBalance();
+    balance += calculateBalance();
 }
