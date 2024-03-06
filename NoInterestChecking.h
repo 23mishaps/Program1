@@ -27,5 +27,5 @@ void NoInterestChecking::printStatement()
     cout << "Account Type: No Interest Checkings Account\nAccount Number: " << accountNo << endl;
     cout << "Account Owner: " << owner << "\nAccount Balance: " << balance << endl;
     cout << "Interest earned: " << calculateBalance() << "\nNewBalance: " << (balance + calculateBalance()) << endl;
-    balance = calculateBalance();
+    balance += calculateBalance();
 }
