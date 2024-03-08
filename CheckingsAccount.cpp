@@ -20,12 +20,9 @@ void CheckingsAccount::writeCheck(double checkValue)
     if(balance > (checkValue + checkFee))
     {
         balance -= (checkValue + checkFee);
-        return balance;
     }
     else 
     {
         cout << "Account Balance is less than check and check fee.\nCannot write check." << endl;
-        return 0;
     }
-    return 0;
 }

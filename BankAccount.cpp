@@ -32,7 +32,7 @@ void BankAccount::deposit(double amt)
         cout << "Cannot deposit a negative funds." << endl;
     }
 }
-double BankAccount::withdraw(double amt)
+void BankAccount::withdraw(double amt)
 {
     if(balance > amt)
     {

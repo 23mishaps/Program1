@@ -24,7 +24,7 @@ public:
     
     //methods
     void deposit(double amt);
-    double withdraw(double amt);
+    void withdraw(double amt);
 };
 
 #endif
