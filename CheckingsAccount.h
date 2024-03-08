@@ -16,7 +16,7 @@ public:
     double getCheckFee() const;
     //methods
     void writeCheck(double checkValue);
-    double calculateBalance() = 0;
+    double calculateInterest() = 0;
     void printStatement() = 0;
     
 

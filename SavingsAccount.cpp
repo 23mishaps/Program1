@@ -25,14 +25,14 @@ double SavingsAccount::getRate() const
 }
 
 //methods
-double SavingsAccount::calculateBalance()
+double SavingsAccount::calculateInterest()
 {
-    return (intRate * balance);
+    return (intRate * getBalance());
 }
 void SavingsAccount::printStatement()
 {
-    cout << "Account Type: Savings Account\nAccount Number: " << accountNo << endl;
-    cout << "Account Owner: " << owner << "\nAccount Balance: " << balance << endl;
-    cout << "Interest earned: " << calculateBalance() << "\nNewBalance: " << (balance + calculateBalance()) << endl;
-    balance += calculateBalance();
+    cout << "Account Type: Savings Account\nAccount Number: " << getAccountNo() << endl;
+    cout << "Account Owner: " << getOwnerName() << "\nAccount Balance: " << getBalance() << endl;
+    cout << "Interest earned: " << calculateInterest() << "\nNewBalance: " << (getBalance() + calculateInterest()) << endl;
+    deposit(calculateInterest());
 }

@@ -17,9 +17,9 @@ double CheckingsAccount::getCheckFee() const
 //methods
 void CheckingsAccount::writeCheck(double checkValue)
 {
-    if(balance > (checkValue + checkFee))
+    if(getBalance() > (checkValue + checkFee))
     {
-        balance -= (checkValue + checkFee);
+        withdraw(checkValue + checkFee);
     }
     else 
     {

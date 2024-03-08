@@ -17,7 +17,7 @@ public:
     double getMinBalance();
 
     //methods
-    double calculateBalance();
+    double calculateInterest();
     void printStatement();
 
 };

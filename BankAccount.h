@@ -19,7 +19,7 @@ public:
     double getBalance()const;
     
     //abstract methods
-    virtual double calculateBalance() = 0;
+    virtual double calculateInterest() = 0;
     virtual void printStatement() = 0;
     
     //methods

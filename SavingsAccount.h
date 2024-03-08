@@ -18,7 +18,7 @@ public:
     double getRate() const;
 
     //methods
-    double calculateBalance();
+    double calculateInterest();
     void printStatement();
 
 };

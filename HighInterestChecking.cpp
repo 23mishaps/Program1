@@ -30,14 +30,14 @@ double HighInterestChecking::getMinBalance()
 }
 
 //methods
-double HighInterestChecking::calculateBalance()
+double HighInterestChecking::calculateInterest()
 {
-    return (intRate * balance);
+    return (intRate * getBalance());
 }
 void HighInterestChecking::printStatement()
 {
-    cout << "Account Type: High Interest Checkings Account\nAccount Number: " << accountNo << endl;
-    cout << "Account Owner: " << owner << "\nAccount Balance: " << balance << endl;
-    cout << "Interest earned: " << calculateBalance() << "\nNewBalance: " << (balance + calculateBalance()) << endl;
-    balance += calculateBalance();
+    cout << "Account Type: High Interest Checkings Account\nAccount Number: " << getAccountNo() << endl;
+    cout << "Account Owner: " << getOwnerName() << "\nAccount Balance: " << getBalance() << endl;
+    cout << "Interest earned: " << calculateInterest() << "\nNewBalance: " << (getBalance() + calculateInterest()) << endl;
+    deposit(calculateInterest());
 }

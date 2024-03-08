@@ -8,24 +8,25 @@ public:
     NoInterestChecking(int accountNo, string owner);
 
     //methods
-    double calculateBalance();
+    double calculateInterest();
     void printStatement();
 
 };
-#endif
 
 //class implementation
 
 NoInterestChecking::NoInterestChecking(int accountNo, string owner): CheckingsAccount(accountNo, owner){};
 
-double NoInterestChecking::calculateBalance()
+double NoInterestChecking::calculateInterest()
 {
     return 0;
 }
 void NoInterestChecking::printStatement()
 {
-    cout << "Account Type: No Interest Checkings Account\nAccount Number: " << accountNo << endl;
-    cout << "Account Owner: " << owner << "\nAccount Balance: " << balance << endl;
-    cout << "Interest earned: " << calculateBalance() << "\nNewBalance: " << (balance + calculateBalance()) << endl;
-    balance += calculateBalance();
+    cout << "Account Type: No Interest Checkings Account\nAccount Number: " << getAccountNo() << endl;
+    cout << "Account Owner: " << getOwnerName() << "\nAccount Balance: " << getBalance() << endl;
+    cout << "Interest earned: " << calculateInterest() << "\nNewBalance: " << (getBalance() + calculateInterest()) << endl;
+    deposit(calculateInterest());
 }
+
+#endif
