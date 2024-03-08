@@ -21,6 +21,6 @@ public:
     void printStatement();
 
 };
-#include "HighInterestChecking.cpp"
+
 #endif
 
